@@ -13,7 +13,7 @@ if (result === 0) {
     $.LSSharedFileListSetAuthorization(items, auth);
 
     //var cfName = $.CFStringCreateWithCString($.nil, "somebinary", $.kCFStringEncodingASCII);
-    var cfName = $.CFStringCreateWithCString($.nil, "<path>", $.kCFStringEncodingASCII);
+    var cfName = $.CFStringCreateWithCString($.nil, "<name>", $.kCFStringEncodingASCII);
 
     var itemRef = $.LSSharedFileListInsertItemURL(items, $.kLSSharedFileListItemLast, cfName, $.nil, temp, $.nil, $.nil);
 
