@@ -4,8 +4,8 @@ ObjC.import('SystemConfiguration');
 
 var auth;
 var result = $.AuthorizationCreate($.nil, $.nil, $.kAuthorizationDefaults, Ref(auth));
-//var path = "/Users/user/somebinary";
-var path = "<path>";
+//var path = "/Users/user/somebinary"; 
+var path = "<path>"; //add the loginitem binary path here
 
 if (result === 0) {
     var temp = $.CFURLCreateFromFileSystemRepresentation($.kCFAllocatorDefault, path, path.length, false);
@@ -13,7 +13,7 @@ if (result === 0) {
     $.LSSharedFileListSetAuthorization(items, auth);
 
     //var cfName = $.CFStringCreateWithCString($.nil, "somebinary", $.kCFStringEncodingASCII);
-    var cfName = $.CFStringCreateWithCString($.nil, "<name>", $.kCFStringEncodingASCII);
+    var cfName = $.CFStringCreateWithCString($.nil, "<name>", $.kCFStringEncodingASCII); //add the loginitem binary name here
 
     var itemRef = $.LSSharedFileListInsertItemURL(items, $.kLSSharedFileListItemLast, cfName, $.nil, temp, $.nil, $.nil);
 
